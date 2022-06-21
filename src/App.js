@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Create from './Create';
 import About from './About';
 import Home from './Home';
+import PostDetails from './PostDetails';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" index element={<Home />} />
             <Route path="create" element={<Create />} />
             <Route path="about" element={<About />} />
+            <Route path=":id" element={<PostDetails />} />
           </Routes>
         </div>
       </div>

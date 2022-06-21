@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Python",
+      "description": "Lorem ipsum dolor sit amet.",
+      "author": "Seth"
+    },
+    {
+      "id": 2,
+      "title": "Go Lang",
+      "description": "ipsum lorem dolor sit am.",
+      "author": "Fiifi"
+    },
+    {
+      "id": 3,
+      "title": "PHP",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, porro.",
+      "author": "Jac"
+    }
+  ]
+}

@@ -12,15 +12,27 @@ const Post = () => {
         <Form>
           <Form.Group className="mb" controlId="formTitle">
             <Form.Label>Title</Form.Label>
-            <Form.Control type="text" value="hh" />
+            <Form.Control
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
           </Form.Group>
           <Form.Group className="mb" controlId="formDescription">
             <Form.Label>Description</Form.Label>
-            <Form.Control type="text" value="hh" />
+            <Form.Control
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
           </Form.Group>
           <Form.Group className="mb" controlId="formDescription">
             <Form.Label>Author</Form.Label>
-            <Form.Control type="text" value="hh" />
+            <Form.Control
+              type="text"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+            />
           </Form.Group>
           <br />
           <Form.Group className="d-grid gap-2">
