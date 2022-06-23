@@ -9,6 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="nav">
+          <Link to="/">Home</Link>
           <Link to="/create">Post</Link>
           <Link to="/register">Sign Up</Link>
           <Link to="/about">About</Link>
@@ -17,9 +18,9 @@ function App() {
         <div className="main-content">
           <Routes>
             <Route path="/" index element={<Home />} />
-            <Route path="create" element={<Create />} />
-            <Route path="about" element={<About />} />
-            <Route path=":id" element={<PostDetails />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/posts/:id" element={<PostDetails />} />
           </Routes>
         </div>
       </div>
