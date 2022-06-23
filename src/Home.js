@@ -1,28 +1,20 @@
-import { useState } from 'react';
+import useFetch from './useFetch';
 import PostList from './PostList';
 
 const Home = () => {
-  const [posts, setPosts] = useState([
-    {
-      title: 'Python',
-      description: 'Lorem ipsum dolor sit amet.',
-      author: 'Seth',
-    },
-    {
-      title: 'Go Lang',
-      description: 'ipsum lorem dolor sit am.',
-      author: 'Fiifi',
-    },
-    {
-      title: 'PHP',
-      description:
-        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, porro.',
-      author: 'Fiifi',
-    },
-  ]);
+  const {
+    data: posts,
+    loading,
+    error,
+  } = useFetch('http://localhost:8000/posts');
   return (
     <div className="home">
-      <PostList posts={posts} title="All Posts" />
+      {error && <div>{error}</div>}
+      {loading && <div>Loading...</div>}
+      {/*  if the data is retrieved and the state is not null or empty render the element */}
+      {posts && posts.length > 0 && (
+        <PostList posts={posts} title="All Posts" />
+      )}
     </div>
   );
 };
