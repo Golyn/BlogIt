@@ -1,32 +1,46 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const Post = () => {
+const UpdatePost = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [author, setAuthor] = useState('');
+  const [id, setID] = useState(null);
+
+  //   const { id } = useParams();
 
   const navigate = useNavigate();
-  const post = { title, description, author };
-  // Adding new post
-  const addPost = (e) => {
-    e.preventDefault();
 
-    fetch('http://localhost:8000/posts/', {
-      method: 'POST',
+  // Filling the input fields with previous data of that id stored
+  //   in browsers local storage(cache) prior to updating it
+  useEffect(() => {
+    setTitle(localStorage.getItem('Title'));
+    setID(localStorage.getItem('ID'));
+    setDescription(localStorage.getItem('Description'));
+    setAuthor(localStorage.getItem('Author'));
+  }, []);
+
+  // Update post
+  const updatePost = (e) => {
+    e.preventDefault();
+    const post = { id, title, description, author };
+
+    fetch(`http://localhost:8000/posts/${id}`, {
+      method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(post),
     }).then(() => {
-      console.log('New post added');
-      navigate('/');
+      console.log('Post updated');
+      navigate('/'); //Redirect to homepage after deletion
     });
   };
+
   return (
-    <div className="post">
+    <div className="update-post">
       <Container>
         <h1>Create post page</h1>
-        <Form onSubmit={addPost}>
+        <Form onSubmit={updatePost}>
           <Form.Group className="mb" controlId="formTitle">
             <Form.Label>Title</Form.Label>
             <Form.Control
@@ -59,19 +73,12 @@ const Post = () => {
             <Button variant="primary">This is a button</Button>
           </Form.Group> */}
           <Button type="submit" variant="primary">
-            Add Post
+            Update
           </Button>
-
-          {/* <Button
-            className="btn btn-primary btn-large centerButton"
-            type="submit"
-          >
-            Send
-          </Button> */}
         </Form>
       </Container>
     </div>
   );
 };
 
-export default Post;
+export default UpdatePost;

@@ -1,23 +1,32 @@
-import { Container } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 
 const PostList = ({ posts, title }) => {
   return (
-    <div className="post-list">
-      <Container>
-        <h1>{title}</h1>
-        {posts.map((post) => (
-          <div className="post-preview" key={post.id}>
-            {/* When post is clicked on view post in the PostDetails page */}
-            <Link to={`/posts/${post.id}`}>
-              <h2>{post.title}</h2>
-              <p>{post.description}</p>
-              <p>{post.author}</p>
-            </Link>
-          </div>
-        ))}
-      </Container>
-    </div>
+    <Container>
+      <Row>
+        {posts.map((post) => {
+          return (
+            <Col md={4} sm={6} className="my-3 py-3 post-preview" key={post.id}>
+              <Link to={`/posts/${post.id}`}>
+                <Card className="h-100">
+                  <Card.Body>
+                    <Card.Title>{post.title}</Card.Title>
+                    <Card.Text>{post.description}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">Author: {post.author}</small>
+                  </Card.Footer>
+                </Card>
+              </Link>
+            </Col>
+          );
+        })}
+      </Row>
+    </Container>
   );
 };
 

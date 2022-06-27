@@ -1,16 +1,46 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Python",
-      "description": "Lorem ipsum dolor sit amet.",
-      "author": "Seth"
-    },
-    {
       "id": 3,
       "title": "PHP",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, porro.",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, porro. React is a library developed by Facebook which makes it very easy to create interactive UIs. It is a JavaScript library used for building reusable components. React is widely used around the world, by some companies you may know:",
       "author": "Jac"
+    },
+    {
+      "id": 13,
+      "title": "Installation",
+      "description": "It includes several utility functions that simplify the most common Redux use cases, including store setup, defining reducers, immutable update logic, and even creating entire \"slices\" of state at once without writing any action creators or action types by hand. ",
+      "author": "Bas"
+    },
+    {
+      "title": "Purpose",
+      "description": "The Redux core library is deliberately unopinionated. It lets you decide how you want to handle everything, like store setup, what your state contains, and how you want to build your reducers.  This is good in some cases, because it gives you flexibility, but that flexibility isn't always needed. Sometimes we just want the simplest possible way to get started, with some good default behavior out of the box. Or, maybe you're writing a larger application and finding yourself writing some similar code, and you'd like to cut down on how much of that code you have to write by hand.",
+      "author": "Ako",
+      "id": 14
+    },
+    {
+      "title": "Why You Should Use",
+      "description": "Redux Toolkit makes it easier to write good Redux applications and speeds up development, by baking in our recommended best practices, providing good default behaviors, catching mistakes, and allowing you to write simpler code. Redux Toolkit is beneficial to all Redux users regardless of skill level or experience. It can be added at the start of a new project, or used as part of an incremental migration in an existing project.",
+      "author": "Ger",
+      "id": 15
+    },
+    {
+      "title": "What's Included",
+      "description": "Redux Toolkit includes:  configureStore(): wraps createStore to provide simplified configuration options and good defaults. It can automatically combine your slice reducers, adds whatever Redux middleware you supply, includes redux-thunk by default, and enables use of the Redux DevTools Extension.",
+      "author": "Jack",
+      "id": 16
+    },
+    {
+      "title": "Text alignment",
+      "description": "Redux use cases, including store setup, defining reducers, immutable update logic, and even creating entire \"slices\" of state at once without writing any action creators or action types by hand.",
+      "author": " Theo",
+      "id": 17
+    },
+    {
+      "title": "Content types",
+      "description": "Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what’s supported. React is a library developed by Facebook which makes it very easy to create interactive UIs. It is a JavaScript library used for building reusable components. React is widely used around the world, by some companies you may know:",
+      "author": "Fii",
+      "id": 18
     }
   ]
 }
