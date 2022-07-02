@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Container>
+        <Container fluid>
           <header>
             <NavBar />
           </header>

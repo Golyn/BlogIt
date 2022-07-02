@@ -14,7 +14,7 @@ const PostList = ({ posts, title }) => {
               <Link to={`/posts/${post.id}`}>
                 <Card className="h-100">
                   <Card.Body>
-                    <Card.Title>{post.title}</Card.Title>
+                    <Card.Title className="fw-bold">{post.title}</Card.Title>
                     <Card.Text>{post.description}</Card.Text>
                   </Card.Body>
                   <Card.Footer>

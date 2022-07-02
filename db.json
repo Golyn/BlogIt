@@ -41,6 +41,42 @@
       "description": "Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what’s supported. React is a library developed by Facebook which makes it very easy to create interactive UIs. It is a JavaScript library used for building reusable components. React is widely used around the world, by some companies you may know:",
       "author": "Fii",
       "id": 18
+    },
+    {
+      "id": 19,
+      "title": "React pagination",
+      "description": "Applications that display large amounts of data in the form of either a list or table can implement pagination to divide the data into a sequence of pages. Instead of fetching huge amounts of data from a server API, pagination loads data on demand, decreasing load time and improving the overall UI.",
+      "author": " Sampath Gajawada"
+    },
+    {
+      "title": "Libraries",
+      "description": "While there are many libraries available for implementing pagination, some are a bit heavy, harming your app’s overall performance. In this article, we’ll create a reusable pagination component using React Hooks.",
+      "author": "Steve",
+      "id": 20
+    },
+    {
+      "title": " GitHub repository",
+      "description": "As an example, we’ll display the passenger list in the image below below using pagination. The complete code is available at the react-pagination GitHub repository; please feel free to fork it:\n\n",
+      "author": "Woxniak",
+      "id": 21
+    },
+    {
+      "title": "useState Hook",
+      "description": "The useState Hook helps to preserve the values between function calls. It takes a single argument, which is the initial state. In the example above, the currentPage variable is set to 1 by default. The useState Hook will return a pair of values, the first being the variable’s state, and the second is the function to set the state.",
+      "author": "Kojo",
+      "id": 22
+    },
+    {
+      "title": "useEffect Hook",
+      "description": "React has access to the state of your component, so it will essentially remember the function you passed and invoke it after DOM updates. We use the useEffect Hook to fetch passenger data from the REST API.",
+      "author": "Viddle",
+      "id": 23
+    },
+    {
+      "title": "How to Make the Filter Component",
+      "description": "There are many ways we can use the filter components to filter out the data which the user gets from the search results. But here, we will be making buttons for this purpose which will filter out the data based on the category of that food – like breakfast, lunch, dinner, and snacks.",
+      "author": "Freecodecamp",
+      "id": 24
     }
   ]
 }

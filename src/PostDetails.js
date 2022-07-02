@@ -1,6 +1,6 @@
 import useFetch from './useFetch';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Card, Row, Col } from 'react-bootstrap';
 
 const PostDetails = () => {
   const { id } = useParams();
@@ -39,30 +39,43 @@ const PostDetails = () => {
   //   navigate('/update');
   // };
   return (
-    <div className="post-details">
-      <h2>This is the Post Details Page</h2>
-      {loading && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {post && (
-        <article>
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
-          <p>{post.author}</p>
-          <Button
-            onClick={deletePost}
-            variant="outline-danger"
-            className="me-3 "
-          >
-            Delete
-          </Button>
-          <Link to={'/update'}>
-            <Button onClick={setData} variant="outline-primary">
-              Update
+    <Container>
+      <div className="post-details mt-4">
+        {loading && <div>Loading...</div>}
+        {error && <div>{error}</div>}
+        {post && (
+          <>
+            <Row>
+              <Col className="my-3 py-3 post-preview">
+                <Card className="h-100">
+                  <Card.Body>
+                    <Card.Title className="fw-bold d-flex justify-content-center mb-4">
+                      {post.title}
+                    </Card.Title>
+                    <Card.Text>{post.description}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">Author: {post.author}</small>
+                  </Card.Footer>
+                </Card>
+              </Col>
+            </Row>
+            <Button
+              onClick={deletePost}
+              variant="outline-danger"
+              className="me-3 "
+            >
+              Delete
             </Button>
-          </Link>
-        </article>
-      )}
-    </div>
+            <Link to={'/update'}>
+              <Button onClick={setData} variant="outline-primary">
+                Update
+              </Button>
+            </Link>
+          </>
+        )}
+      </div>
+    </Container>
   );
 };
 

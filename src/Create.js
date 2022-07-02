@@ -39,7 +39,8 @@ const Post = () => {
           <Form.Group className="mb" controlId="formDescription">
             <Form.Label>Description</Form.Label>
             <Form.Control
-              type="text"
+              as="textarea"
+              rows={3}
               value={description}
               required
               onChange={(e) => setDescription(e.target.value)}
