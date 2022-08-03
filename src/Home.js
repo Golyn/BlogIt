@@ -16,7 +16,7 @@ const Home = () => {
     loading,
     error,
   } = useFetch('http://localhost:8000/posts');
-
+  console.log(posts);
   // Get current posts
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;

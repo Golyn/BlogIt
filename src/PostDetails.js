@@ -9,7 +9,6 @@ const PostDetails = () => {
     loading,
     error,
   } = useFetch(`http://localhost:8000/posts/${id}`);
-  // console.log(id);
 
   const navigate = useNavigate();
 
@@ -34,10 +33,6 @@ const PostDetails = () => {
     console.log('post updated');
   };
 
-  // // Update redirect
-  // const updateRedirect = () => {
-  //   navigate('/update');
-  // };
   return (
     <Container>
       <div className="post-details mt-4">
