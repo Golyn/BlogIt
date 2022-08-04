@@ -15,7 +15,7 @@ const PostDetails = () => {
 
   // Deleting a post
   const deletePost = () => {
-    fetch(`http://localhost:8000/posts/${id}`, {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
       method: 'DELETE',
     }).then(() => {
       console.log('Post deleted');
