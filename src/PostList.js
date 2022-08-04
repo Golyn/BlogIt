@@ -13,10 +13,11 @@ const PostList = ({ posts, title }) => {
                 <Card className="h-100">
                   <Card.Body>
                     <Card.Title className="fw-bold">{post.title}</Card.Title>
-                    <Card.Text>{post.description}</Card.Text>
+                    <Card.Text>{post.body}</Card.Text>
+                    {/* <Card.Text>{post.description}</Card.Text> */}
                   </Card.Body>
                   <Card.Footer>
-                    <small className="text-muted">Author: {post.author}</small>
+                    {/* <small className="text-muted">Author: {post.author}</small> */}
                   </Card.Footer>
                 </Card>
               </Link>

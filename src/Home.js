@@ -15,7 +15,7 @@ const Home = () => {
     data: posts,
     loading,
     error,
-  } = useFetch('http://localhost:8000/posts');
+  } = useFetch('https://jsonplaceholder.typicode.com/posts'); //http://localhost:8000/posts
   console.log(posts);
   // Get current posts
   const indexOfLastPost = currentPage * postPerPage;

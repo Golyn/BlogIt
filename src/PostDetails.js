@@ -8,7 +8,8 @@ const PostDetails = () => {
     data: post,
     loading,
     error,
-  } = useFetch(`http://localhost:8000/posts/${id}`);
+  } = useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  // } = useFetch(`http://localhost:8000/posts/${id}`);
 
   const navigate = useNavigate();
 
@@ -24,11 +25,13 @@ const PostDetails = () => {
 
   // Retrieving data and storing it in browers local storage(cache)
   const setData = () => {
-    let { id, title, description, author } = post;
+    // let { id, title, description, author } = post;
+    let { id, title, body } = post;
     localStorage.setItem('ID', id);
     localStorage.setItem('Title', title);
-    localStorage.setItem('Description', description);
-    localStorage.setItem('Author', author);
+    // localStorage.setItem('Description', description);
+    localStorage.setItem('Body', body);
+    // localStorage.setItem('Author', author);
     console.log(post);
     console.log('post updated');
   };
@@ -47,10 +50,11 @@ const PostDetails = () => {
                     <Card.Title className="fw-bold d-flex justify-content-center mb-4">
                       {post.title}
                     </Card.Title>
-                    <Card.Text>{post.description}</Card.Text>
+                    <Card.Text>{post.body}</Card.Text>
+                    {/* <Card.Text>{post.description}</Card.Text> */}
                   </Card.Body>
                   <Card.Footer>
-                    <small className="text-muted">Author: {post.author}</small>
+                    {/* <small className="text-muted">Author: {post.author}</small> */}
                   </Card.Footer>
                 </Card>
               </Col>
