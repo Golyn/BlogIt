@@ -29,10 +29,13 @@ const UpdatePost = () => {
     const post = { id, title, body };
     // const post = { id, title, description, author };
 
-    fetch(`http://localhost:8000/posts/${id}`, {
+    // fetch(`http://localhost:8000/posts/${id}`, {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(post),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
     }).then(() => {
       console.log('Post updated');
       navigate('/'); //Redirect to homepage after deletion
@@ -58,7 +61,7 @@ const UpdatePost = () => {
             <Form.Control
               as="textarea"
               rows={3}
-              value={setBody}
+              value={body}
               required
               onChange={(e) => setBody(e.target.value)}
             />

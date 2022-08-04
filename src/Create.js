@@ -17,9 +17,14 @@ const Post = () => {
 
     fetch('https://jsonplaceholder.typicode.com/posts', {
       //ttp://localhost:8000/posts/
+      // method: 'POST',
+      // headers: { 'Content-Type': 'application/json' },
+      // body: JSON.stringify(post),
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(post),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
     }).then(() => {
       console.log('New post added');
       navigate('/');
